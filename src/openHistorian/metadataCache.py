@@ -355,7 +355,7 @@ class metadataCache:
     def GetMeasurementsBySignalType(self, signalType: SignalType, instanceName: Optional[str] = None) -> List[measurementRecord]:
         matchedRecords: List[measurementRecord] = list()
 
-        signalTypeName = str(signalType)
+        signalTypeName = str(signalType.name)
 
         #                             012345678901
         if signalTypeName.startswith("SignalType."):
