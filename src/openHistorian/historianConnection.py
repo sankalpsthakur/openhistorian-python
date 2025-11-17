@@ -29,7 +29,7 @@ from snapDB.snapConnection import snapConnection
 from snapDB.encodingDefinition import encodingDefinition
 from gsf.streamEncoder import streamEncoder
 from gsf.binaryStream import binaryStream
-from gsf import override
+from oh_gsf import override
 from typing import Optional, Callable
 from enum import IntEnum
 from time import time

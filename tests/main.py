@@ -34,7 +34,7 @@ from openHistorian.measurementRecord import measurementRecord, SignalType
 from snapDB.timestampSeekFilter import timestampSeekFilter
 from snapDB.pointIDMatchFilter import pointIDMatchFilter
 from snapDB.enumerations import QualityFlags
-from gsf import Ticks
+from oh_gsf import Ticks
 from typing import Optional, List
 from datetime import datetime, timedelta
 from time import time, sleep

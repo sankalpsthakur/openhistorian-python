@@ -24,7 +24,7 @@
 from .measurementRecord import measurementRecord, SignalType
 from .deviceRecord import deviceRecord
 from .phasorRecord import phasorRecord
-from gsf import Empty
+from oh_gsf import Empty
 import xml.etree.ElementTree as xmlParser
 from typing import Optional, List, Dict, Set
 from datetime import datetime

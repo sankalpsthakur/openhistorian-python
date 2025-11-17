@@ -23,7 +23,7 @@
 
 from .deviceRecord import deviceRecord
 from .phasorRecord import phasorRecord
-from gsf import Empty
+from oh_gsf import Empty
 from typing import Optional
 from enum import IntEnum
 from datetime import datetime

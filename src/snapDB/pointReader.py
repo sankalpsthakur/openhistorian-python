@@ -27,7 +27,7 @@ from .treeStream import treeStream
 from .enumerations import *
 from . import Server
 from gsf.binaryStream import binaryStream
-from gsf import override
+from oh_gsf import override
 from typing import TypeVar, Generic, Callable
 
 TKey = TypeVar('TKey', bound=snapTypeBase)

@@ -22,7 +22,7 @@
 #******************************************************************************************************
 
 from gsf.binaryStream import binaryStream
-from gsf import Ticks
+from oh_gsf import Ticks
 from datetime import timedelta
 
 class readerOptions:

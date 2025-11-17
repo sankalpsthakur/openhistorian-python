@@ -114,7 +114,7 @@ from openHistorian.historianInstance import historianInstance
 from openHistorian.historianKey import historianKey
 from openHistorian.historianValue import historianValue
 from snapDB.enumerations import QualityFlags
-from gsf import Ticks
+from oh_gsf import Ticks
 from typing import Optional
 from datetime import datetime
 import numpy as np

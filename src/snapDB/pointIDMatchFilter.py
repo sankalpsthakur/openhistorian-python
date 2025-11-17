@@ -23,7 +23,7 @@
 
 from .matchFilterBase import matchFilterBase
 from gsf.binaryStream import binaryStream
-from gsf import Limits
+from oh_gsf import Limits
 from typing import Set, List, Optional
 from uuid import UUID
 import numpy as np

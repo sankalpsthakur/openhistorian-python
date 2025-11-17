@@ -24,7 +24,7 @@
 from .snapTypeBase import snapTypeBase
 from .encodingDefinition import encodingDefinition
 from .keyValueEncoderBase import keyValueEncoderBase
-from gsf import static_init
+from oh_gsf import static_init
 from typing import Optional, Dict
 from uuid import UUID
 

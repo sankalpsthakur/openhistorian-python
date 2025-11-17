@@ -26,7 +26,7 @@ from .historianValue import historianValue
 from .historianKeyValueEncoder import historianKeyValueEncoder
 from snapDB.library import library
 from snapDB.fixedSizeKeyValueEncoder import fixedSizeKeyValueEncoder
-from gsf import static_init
+from oh_gsf import static_init
 
 @static_init
 class snapDBTypeRegistration:

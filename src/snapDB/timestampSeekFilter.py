@@ -23,7 +23,7 @@
 
 from .seekFilterBase import seekFilterBase
 from gsf.binaryStream import binaryStream
-from gsf import Ticks
+from oh_gsf import Ticks
 from typing import Optional
 from datetime import datetime, timedelta
 from uuid import UUID
