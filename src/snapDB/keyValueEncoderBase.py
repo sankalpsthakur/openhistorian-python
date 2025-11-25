@@ -23,7 +23,7 @@
 
 from .encodingDefinition import encodingDefinition
 from .snapTypeBase import snapTypeBase
-from gsf.binaryStream import binaryStream
+from oh_gsf.binaryStream import binaryStream
 from abc import ABC, abstractmethod
 from typing import TypeVar, Generic
 import numpy as np

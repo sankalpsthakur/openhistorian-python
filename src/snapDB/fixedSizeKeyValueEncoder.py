@@ -24,7 +24,7 @@
 from .encodingDefinition import encodingDefinition
 from .keyValueEncoderBase import keyValueEncoderBase
 from .snapTypeBase import snapTypeBase
-from gsf.binaryStream import binaryStream
+from oh_gsf.binaryStream import binaryStream
 from oh_gsf import override
 from typing import TypeVar, Generic
 import numpy as np

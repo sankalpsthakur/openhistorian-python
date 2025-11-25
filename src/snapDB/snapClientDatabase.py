@@ -33,7 +33,7 @@ from .readerOptions import readerOptions
 from .library import library
 from .enumerations import *
 from . import Server
-from gsf.binaryStream import binaryStream
+from oh_gsf.binaryStream import binaryStream
 from typing import TypeVar, Generic, Optional, Callable
 
 TKey = TypeVar('TKey', bound=snapTypeBase)

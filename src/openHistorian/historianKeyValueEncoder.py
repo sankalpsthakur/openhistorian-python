@@ -25,7 +25,7 @@ from .historianKey import historianKey
 from .historianValue import historianValue
 from snapDB.encodingDefinition import encodingDefinition
 from snapDB.keyValueEncoderBase import keyValueEncoderBase
-from gsf.binaryStream import binaryStream
+from oh_gsf.binaryStream import binaryStream
 from oh_gsf import Limits, override
 from uuid import UUID
 import numpy as np

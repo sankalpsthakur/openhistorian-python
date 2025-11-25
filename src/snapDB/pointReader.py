@@ -26,7 +26,7 @@ from .keyValueEncoderBase import keyValueEncoderBase
 from .treeStream import treeStream
 from .enumerations import *
 from . import Server
-from gsf.binaryStream import binaryStream
+from oh_gsf.binaryStream import binaryStream
 from oh_gsf import override
 from typing import TypeVar, Generic, Callable
 

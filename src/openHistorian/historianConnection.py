@@ -27,8 +27,8 @@ from .historianValue import historianValue
 from .metadataCache import metadataCache
 from snapDB.snapConnection import snapConnection
 from snapDB.encodingDefinition import encodingDefinition
-from gsf.streamEncoder import streamEncoder
-from gsf.binaryStream import binaryStream
+from oh_gsf.streamEncoder import streamEncoder
+from oh_gsf.binaryStream import binaryStream
 from oh_gsf import override
 from typing import Optional, Callable
 from enum import IntEnum

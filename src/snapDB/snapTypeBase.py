@@ -21,7 +21,7 @@
 #
 #******************************************************************************************************
 
-from gsf.binaryStream import binaryStream
+from oh_gsf.binaryStream import binaryStream
 from abc import ABC, abstractmethod
 from uuid import UUID
 

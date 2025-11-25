@@ -27,8 +27,8 @@ from .snapClientDatabase import snapClientDatabase
 from .snapTypeBase import snapTypeBase
 from .enumerations import *
 from . import Server
-from gsf.streamEncoder import streamEncoder
-from gsf.binaryStream import binaryStream
+from oh_gsf.streamEncoder import streamEncoder
+from oh_gsf.binaryStream import binaryStream
 from typing import TypeVar, Generic, List, Optional
 import socket
 import numpy as np

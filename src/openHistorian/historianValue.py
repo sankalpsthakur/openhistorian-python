@@ -23,7 +23,7 @@
 
 from snapDB.snapTypeBase import snapTypeBase
 from snapDB.enumerations import QualityFlags
-from gsf.binaryStream import binaryStream
+from oh_gsf.binaryStream import binaryStream
 from oh_gsf import Limits, ByteSize, override
 from uuid import UUID
 import struct

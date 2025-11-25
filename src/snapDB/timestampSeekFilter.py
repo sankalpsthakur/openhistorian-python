@@ -22,7 +22,7 @@
 #******************************************************************************************************
 
 from .seekFilterBase import seekFilterBase
-from gsf.binaryStream import binaryStream
+from oh_gsf.binaryStream import binaryStream
 from oh_gsf import Ticks
 from typing import Optional
 from datetime import datetime, timedelta

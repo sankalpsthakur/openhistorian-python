@@ -23,7 +23,7 @@
 
 from .metadataCache import metadataCache
 from snapDB.snapTypeBase import snapTypeBase
-from gsf.binaryStream import binaryStream
+from oh_gsf.binaryStream import binaryStream
 from oh_gsf import Limits, Ticks, Empty, override
 from typing import Optional
 from datetime import datetime

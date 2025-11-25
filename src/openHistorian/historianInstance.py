@@ -25,7 +25,7 @@ from .historianKey import historianKey
 from .historianValue import historianValue
 from snapDB.snapClientDatabase import snapClientDatabase
 from snapDB.databaseInfo import databaseInfo
-from gsf.binaryStream import binaryStream
+from oh_gsf.binaryStream import binaryStream
 from typing import Callable
 
 class historianInstance(snapClientDatabase[historianKey, historianValue]):

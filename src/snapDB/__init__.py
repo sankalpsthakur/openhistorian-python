@@ -22,7 +22,7 @@
 #******************************************************************************************************
 
 from .enumerations import *
-from gsf.binaryStream import binaryStream
+from oh_gsf.binaryStream import binaryStream
 
 class Server:
     """
