@@ -134,3 +134,9 @@ def test_ticks_from_datetime_round_trips_microseconds():
     dt = datetime(2026, 9, 1, 12, 34, 56, 789012)
 
     assert Ticks.ToDateTime(Ticks.FromDateTime(dt)) == dt
+
+
+def test_ticks_from_timedelta_is_exact_for_long_durations():
+    td = timedelta(days=739000, seconds=45296, microseconds=789012)
+
+    assert int(Ticks.FromTimeDelta(td)) == (739000 * 86400 + 45296) * 10000000 + 7890120
