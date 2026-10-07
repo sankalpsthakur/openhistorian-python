@@ -18,13 +18,20 @@
 
 import inspect
 import os
+import xml.etree.ElementTree as ET
 from configparser import ConfigParser
+from datetime import datetime, timedelta, timezone
+
+import numpy as np
 
 from openHistorian.historianConnection import historianConnection
+from openHistorian.historianValue import historianValue
+from openHistorian.metadataCache import metadataCache
 from openHistorian.phasorRecord import phasorRecord
 from snapDB.snapClientDatabase import snapClientDatabase
 from snapDB.snapConnection import snapConnection
 from snapDB.treeStream import treeStream
+from oh_gsf import Ticks
 
 
 REPO_ROOT = os.path.join(os.path.dirname(os.path.realpath(__file__)), "..")
@@ -89,3 +96,41 @@ def test_numpy_declared_in_install_requires():
              for line in requires.splitlines() if line.strip()}
 
     assert "numpy" in names
+
+
+def _updated_on(text):
+    root = ET.fromstring(f"<Record><UpdatedOn>{text}</UpdatedOn></Record>")
+    return metadataCache._metadataCache__getUpdatedOn(root)
+
+
+def test_updated_on_parses_timestamps_without_offset():
+    expected = datetime(2026, 1, 15, 8, 30, 0, 120000)
+
+    assert _updated_on("2026-01-15 08:30:00.12") == expected
+    assert _updated_on("2026-01-15T08:30:00.120") == expected
+
+
+def test_updated_on_keeps_utc_offsets():
+    assert _updated_on("2026-01-15T08:30:00.12-05:00") == datetime(
+        2026, 1, 15, 8, 30, 0, 120000, tzinfo=timezone(-timedelta(hours=5)))
+    assert _updated_on("2026-01-15T08:30:00.12+05:30") == datetime(
+        2026, 1, 15, 8, 30, 0, 120000, tzinfo=timezone(timedelta(hours=5, minutes=30)))
+
+
+
+def test_updated_on_keeps_offset_with_millisecond_fraction():
+    assert _updated_on("2026-01-15T08:30:00.120-05:00") == datetime(
+        2026, 1, 15, 8, 30, 0, 120000, tzinfo=timezone(-timedelta(hours=5)))
+
+def test_as_quality_keeps_bits_beyond_defined_flags():
+    value = historianValue()
+    value.Value3 = np.uint64(2**33 + 5)
+
+    assert int(value.AsQuality) == 2**33 + 5
+    value.ToString()
+
+
+def test_ticks_from_datetime_round_trips_microseconds():
+    dt = datetime(2026, 9, 1, 12, 34, 56, 789012)
+
+    assert Ticks.ToDateTime(Ticks.FromDateTime(dt)) == dt
